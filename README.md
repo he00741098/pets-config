@@ -255,3 +255,132 @@
       - ""
       - ""
      # recipe-permission: ecopets.craft.table
+- id: techno
+
+  # The display name of the pet
+  name: "&6Technoblade"
+
+  # The description of the pet
+  description: "&8&oLevel up by dealing melee damage"
+
+  # The xp requirements for each pet level - add new levels by adding more to this list
+  level-xp-requirements:
+    - 50
+    - 125
+    - 200
+    - 300
+    - 500
+    - 750
+    - 1000
+    - 1500
+    - 2000
+    - 3500
+    - 5000
+    - 7500
+    - 10000
+    - 15000
+    - 20000
+    - 30000
+    - 50000
+    - 75000
+    - 100000
+    - 200000
+    - 300000
+    - 400000
+    - 500000
+    - 600000
+    - 700000
+    - 800000
+    - 900000
+    - 1000000
+    - 1100000
+    - 1200000
+    - 1300000
+    - 1400000
+    - 1500000
+    - 1600000
+    - 1700000
+    - 1800000
+    - 1900000
+    - 2000000
+    - 2100000
+    - 2200000
+    - 2300000
+    - 2400000
+    - 2500000
+    - 2600000
+    - 2750000
+    - 2900000
+    - 3100000
+    - 3400000
+    - 3700000
+
+  # An XP Gain method takes a trigger as the ID and a multiplier
+  # The multiplier takes the value produced by the trigger and multiplies it
+  # by some value to calculate the experience that should be given
+  xp-gain-methods:
+    - id: melee_attack
+      multiplier: 0.5
+
+  # Custom placeholders to be used in descriptions,
+  # Don't add % to the IDs, this is done automatically
+  # The value takes a %level% placeholder and is a mathetmatical expression
+  level-placeholders:
+    - id: "damage_multiplier"
+      value: "%level%"
+
+  # The text shown with the %effects% placeholder
+  # The number dictates the minimum level for this text to show for
+  # Adding new levels will override this text on those levels or above
+  effects-description: [ ]
+
+  # Same as above, but for %rewards%
+  rewards-description:
+    1:
+      - "&8» &8RIP technoblade"
+
+  # Same as above, but for %level_up_messages%
+  level-up-messages:
+    1:
+      - "&8» &8Techno Pet"
+      - "   &8Leveled Up"
+
+  # Commands to be sent on levelup, can be formatted two ways:
+  # level:command (e.g. 10:eco give %player% 1000), which would execute that command for level 10
+  # command (e.g. eco give %player% 5000), which would execute that command for all levels
+  level-commands: [ ]
+
+  # The effects for the pet, has %level% as a placeholder
+  effects: [ ]
+
+  # The conditions for the pet, also has %level% as a placeholder
+  conditions: [ ]
+
+  # The texture of the pet entity in game
+  # If you're using modelengine, use modelengine:id as the texture
+  entity-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ZlOTcyNWM5NTA0NzJlNDY5YjlmY2NhZTMyZjYxYmNlZmViZGI1ZWE5Y2U5YzkyZDU4MTcxZmZiN2EzMzZmZSJ9fX0="
+
+  # The icon in GUIs
+  icon: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ZlOTcyNWM5NTA0NzJlNDY5YjlmY2NhZTMyZjYxYmNlZmViZGI1ZWE5Y2U5YzkyZDU4MTcxZmZiN2EzMzZmZSJ9fX0=
+
+  # The spawn egg
+  spawn-egg:
+    enabled: true # If the pet should have a spawn egg
+    item: pig_spawn_egg unbreaking:1 hide_enchants
+    name: "&6Technoblader&f Pet Egg"
+    lore:
+      - ""
+      - "&8&oPlace on the ground to"
+      - "&8&ounlock the &r&6Techno&8&o pet!"
+    craftable: false
+    recipe: 
+      - ""
+      - ""
+      - ""
+      - ""
+      - "porkchop"
+      - ""
+      - ""
+      - ""
+      - ""
+   # recipe-permission: ecopets.craft.technoblade
